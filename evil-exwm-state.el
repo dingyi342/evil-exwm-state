@@ -65,6 +65,10 @@
 
 (define-key evil-exwm-state-map "i" 'evil-exwm-insert-state)
 
+;; Ensure initial state is char mode / exwm-insert
+(setq exwm-manage-configurations '((t char-mode t)))
+(evil-set-initial-state 'exwm-mode 'exwm-insert)
+
 (provide 'evil-exwm-state)
 
 ;;; evil-exwm-state.el ends here
